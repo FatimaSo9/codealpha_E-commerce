@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - ShopHub</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">Shop<span>Hub</span></a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/#products-section">Products</a>
+        <a href="/orders.html">My Orders</a>
+      </nav>
+      <div class="header-right">
+        <a href="/cart.html" class="cart-link">
+          🛒 Cart
+          <span id="cart-count">0</span>
+        </a>
+        <div id="auth-links">
+          <a href="/login.html" class="btn btn-secondary btn-sm">Login</a>
+          <a href="/register.html" class="btn btn-primary btn-sm">Register</a>
+        </div>
+        <div id="user-menu">
+          <span id="user-name"></span>
+          <a href="/orders.html">Orders</a>
+          <a href="#" id="logout-btn" class="btn btn-secondary btn-sm">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="cart-page">
+    <div class="container">
+      <h1>Shopping Cart</h1>
+
+      <div id="cart-content" class="cart-layout">
+        <div id="cart-items">
+          <div class="loading-container"><div class="spinner"></div></div>
+        </div>
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span>Free</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+          <a href="/checkout.html" class="btn btn-primary btn-lg">Proceed to Checkout</a>
+        </div>
+      </div>
+
+      <div id="empty-cart" class="empty-cart hidden">
+        <h2>Your cart is empty</h2>
+        <p>Looks like you haven't added anything to your cart yet.</p>
+        <a href="/" class="btn btn-primary">Start Shopping</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 ShopHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+  <script src="/js/app.js"></script>
+  <script src="/js/cart.js"></script>
+</body>
+</html>
